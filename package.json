@@ -1,0 +1,42 @@
+{
+  "name": "homebridge-rpi-i2c-temp-hum",
+  "version": "1.0.0",
+  "description": "A homekit accessory plugin for homebridge to access AHT10 temperature and humidity via i2c on Raspberry Pi",
+  "main": "dist/accessory.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "rimraf ./dist && tsc",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernando Urbina <nano@mac.com>",
+  "engines": {
+    "homebridge": ">=1.0.0"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "license": "ISC",
+  "files": [
+    "LICENSE",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanourbina/homebridge-rpi-i2c-temp-hum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nanourbina/homebridge-rpi-i2c-temp-hum/issues"
+  },
+  "devDependencies": {
+    "@types/node": "10.17.19",
+    "homebridge": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/i2c-bus": "^5.1.0",
+    "i2c-bus": "^5.2.1"
+  }
+}
